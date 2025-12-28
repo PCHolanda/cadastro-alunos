@@ -7,7 +7,7 @@ const studentForm = document.getElementById('studentForm');
 const studentList = document.getElementById('studentList');
 
 // API URL
-const API_URL = 'http://localhost:3000/api/students';
+const API_URL = '/api/students';
 
 // Functions
 function openModal() {
