@@ -119,11 +119,12 @@ async function handleFormSubmit(event) {
             fetchStudents(); // Refresh list
             closeModal();
         } else {
-            alert('Erro ao salvar aluno.');
+            const errorData = await response.json();
+            alert(`Erro: ${errorData.error || 'Erro ao salvar aluno.'}`);
         }
     } catch (error) {
         console.error('Error saving student:', error);
-        alert('Erro de conexão.');
+        alert(`Erro de conexão: ${error.message}`);
     }
 }
 
